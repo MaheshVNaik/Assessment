@@ -1,0 +1,14 @@
+<h1 style="margin-left: 150px; color: rgb(180, 113, 25);">Latest Headings</h1>
+
+<div class="container-fuide mt-5">
+    <div class="row">
+        <div *ngFor="let d of latestNewsDisplay" class="col-lg-3 mt-3">
+            <div class="box">
+                <img src="{{d.urlToImage}}" width="100%">
+                <h5 class="mt-2 mb-2">{{d.title}}</h5>
+                <a href="{{d.url}}" class="btn btn-dark btn-sm mt-2 nav justify-content-center">Read More</a>
+            </div>
+        </div>
+    </div>
+
+</div>

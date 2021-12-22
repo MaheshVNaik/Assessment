@@ -1,0 +1,47 @@
+<div class="full">
+    <h1>Practice Concepts in Angular</h1>
+    <hr><hr>
+<div class="box">
+    <h3>Function calling </h3>
+    <button class = "btn btn-primary" (click)="getName()">call Function</button>
+</div>
+<br>
+<br>
+<hr>
+    <h1>Important Event Handling </h1>
+    <input type="text"placeholder ="keyUpEvent" #box (keyup) = "onclick(box.value)">
+    <br><br>
+    <hr>
+    <input type="text"placeholder ="keyDownEvent" #box1 (keydown) = "onclick(box1.value)">
+    <br><br>
+    <hr>
+    <input type="text"placeholder ="keyUpEvent" #box2 (blur) = "onclick(box2.value)">
+    <br><br>
+    <hr>
+    <div>
+        <h1>Get Input values</h1>
+        <input type="text" placeholder="Enter Something" #in (input) = getValue(in.value)>
+        <p>Text is : {{show}}</p>
+    </div>
+    <div>
+        <h1>Counter </h1>
+        <button (click) = "onCount('add')">++</button>
+        <br>
+        <br>
+        <p>Count: {{count}}</p>
+        
+        <button (click) = "onCount('minus')">--</button>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <h1 [style.color] ="color" [style.background] = "BackGround">Style binding </h1>
+        <button (click)=onChange()>On click </button>
+    </div>
+    <br/>
+    <br>
+    <h1>Toggle Elements</h1>
+        <button (click)="change()">Click me </button>
+        <h1 *ngIf = "display"> You can See Me </h1>
+
+</div>

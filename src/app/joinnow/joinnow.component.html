@@ -1,0 +1,17 @@
+<section class="joinnow">
+    <div class="login col-lg-4 m-auto">
+        <form #loginForm = "ngForm" (ngSubmit) = "userLogin(loginForm.value)">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" required #email = "ngModel" ngModel name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" ><span *ngIf = "email.invalid && email.touched" class="error" >Email is Required</span></div>
+           
+              <label for="exampleInputPassword1" class="form-label" >Password</label>
+              <input type="password" ngModel name ="password"class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary col-lg-12"[disabled] = loginForm  >Log In</button>
+          </form>
+
+    </div>
+
+</section>
